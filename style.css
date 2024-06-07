@@ -1,5 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family-Chakra+Petch:w ght@400:700&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@400;700&display=swap');
 
 :root {
     --cor-de-fundo: #1E1E1E;
@@ -37,8 +36,9 @@ body {
     color: var(--verde);
 }
 
+
 .botao {
-    font-family: "Crakra Petch", sans-serif;
+    font-family: 'Chakra Petch', sans-serif;
     background-color: var(--botao-inativo);
     color: var(--branco);
     display: flex;
@@ -53,7 +53,7 @@ body {
     border-top: none;
 }
 
-.botao:first-chil {
+.botao:first-child {
     border-radius: 40px 40px 0 0;
 }
 
@@ -61,27 +61,61 @@ body {
     display: block;
 }
 
-.ativo {
+.botao.ativo{
     background-color: var(--botao-ativo);
     border-bottom: 4px solid var(--verde);
 }
 
-.abas-textos {
+.abas-textos{
     background-color: var(--texto-fundo);
-        padding: 40px;
-        border-radius: 0 0 40px 40px;
-    }
+    padding: 40px;
+    border-radius: 0 0 40px 40px;
+}
+.aba-conteudo.ativo{
+    display:block;
+}
 
-    .abas-textos {
-        background-color: var(--texto-fundo);
-        padding: 40px;
-        border-radius: 0 0 40px 40px;
-    }
+.aba-conteudo{
+    display: none;
+}
 
-    @media screen and (min-width:768px) {
-        .botoes {
-            display: flex;
-        }
+.aba-conteudo-titulo-principal{
+    font-size: 28px;
+    text-align: center;
+}
+.aba-conteudo-titulo-secundario{
+    text-align: center;
+    color: var(--verde);
+    text-transform: uppercase;
+}
+
+.contador{
+    display:flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.contador-digito{
+    padding: 0 16px;
+    text-align: center;
+    min-width: 100px;
+}
+
+.contador-digito-numero{
+    font-size: 80px;
+    margin: 0;
+
+}
+
+.contador-digito-texto{
+    color: var(--verde);
+    font-size: 20px;
+    margin: 0;
+
+}
+
+@media screen and (min-width: 768px) {
+    .botoes {
+        display: flex;
     }
 
     .botao:first-child {
@@ -91,3 +125,4 @@ body {
     .botao:last-child {
         border-radius: 0 40px 0 0;
     }
+}
